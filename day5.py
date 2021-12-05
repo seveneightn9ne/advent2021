@@ -37,7 +37,7 @@ def p_range(p1, p2):
         y_1 = p2[1]
         x_step = 1 if x_1 > x_0 else -1
         y_step = 1 if y_1 > y_0 else -1
-        return zip(range(x_0, x_1, x_step), range(y_0, y_1, y_step))
+        return zip(range(x_0, x_1 + x_step, x_step), range(y_0, y_1 + y_step, y_step))
 
 def points_2_overlap(lines: List[List[List[int]]]):
     points = defaultdict(lambda: defaultdict(lambda: False))
