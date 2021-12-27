@@ -33,6 +33,7 @@ def operate(operation, values):
     elif operation == TYPE_EQ:
         return 1 if values[0] == values[1] else 0
     raise "WHAT"
+
 def eat_packet(input: str, pfx='') -> Tuple[int, int]: # (value, length)
     print("{}{}".format(pfx, input))
     version_sum = int(input[:3], 2)
